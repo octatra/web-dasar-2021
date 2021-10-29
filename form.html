@@ -1,81 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>Form Biodata</h3>
-    <hr>
-    <table border="0">
-        <tr>
-            <td>NIM</td>
-            <td>:</td>
-            <td><Input type="text"></Input></td>
-        </tr>
-        <tr>
-            <td>Nama</td>
-            <td>:</td>
-            <td><Input type="text" size="50"></Input></td>
-        </tr>
-        <tr>
-            <td>Jenis Kelamin</td>
-            <td>:</td>
-            <td><Input type="radio">Laki Laki</Input></td>
-            <td><Input type="radio">Wanita</Input></td>
-        </tr>
-        <tr>
-            <td>Jurusan</td>
-            <td>:</td>
-            <td><select>
-                <option value="Pilih">Pilih....</option>
-                <option value="Pilih">RPL</option>
-                <option value="Pilih">Ilmu Komputer</option>
-            </select></td>
-        </tr>
-        <tr>
-            <td>Hobby</td>
-            <td>:</td>
-            <td><Input type="checkbox">Komputer</Input></td>
-            <td><Input type="checkbox">Music</Input></td>
-            <td><Input type="checkbox">Olahraga</Input></td>
-            <td><Input type="checkbox">Traveling</Input></td>
-        </tr>
-        <tr>
-            <td>Catatan</td>
-            <td>:</td>
-            <td><textarea cols="30" rows="10"></textarea></td>
-        </tr>
-        <tr>
-            <td>Foto</td>
-            <td>:</td>
-            <td><Input type="file"></Input></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>:</td>
-            <td><Input type="text" size="50"></Input></td>
-        </tr>
-        <tr>
-            <td>Sandi Login</td>
-            <td>:</td>
-            <td><Input type="password" size="50"></Input></td>
-        </tr>        
-        <tr>
-            <td>Ulangi Sandi Login</td>
-            <td>:</td>
-            <td><Input type="password" size="50"></Input></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><input type="submit" name="submit" value="submit"></td>
-            <td><input type="submit" name="batal" value="Batal"></td>
-            <td><input type="submit" name="warning" value="Peringatan"></td>
 
-        </tr>                
-    </table>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Form Biodata</h1>
+    <div class="container">
+        <form table action="" method="post">
+            <div class="mb-3">
+                <label for="nim">NIM</label>
+                <input required class="form-control" type="text" name="nim" id="nim" placeholder="Masukan Nim anda" style="width: 900px;">
+            </div>
+
+            <div class="mb-3">
+                <label for="nama">NAMA</label>
+                <input required class="form-control" type="text" name="nama" id="nama" placeholder="Masukan Nama anda ">
+            </div>
+
+            <div class="mb-3">
+                <label for="jk">Jenis Kelamin : </label>
+                <input type="radio" name="jk" id="jk" value="L">Pria
+                <input type="radio" name="jk" id="jk" value="P">Wanita
+            </div>
+
+            <label for="jk">Jurusan</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Pilih...</option>
+                <option value="1">Ilmu Komputer</option>
+                <option value="2">Akutansi</option>
+                <option value="3">Gizi</option>
+            </select>
+
+            <br>
+
+            <div class="mb-3">
+                <label for="jk">Hobby : </label>
+                <input type="checkbox" name="jk" id="jk" value="L">Komputer
+                <input type="checkbox" name="jk" id="jk" value="P">Basket
+                <input type="checkbox" name="jk" id="jk" value="P">Volly
+                <input type="checkbox" name="jk" id="jk" value="P">Traveling
+            </div>
+
+            <div class="mb-3">
+                <label for="jurusan">Jurusan</label>
+                <select class="form-control" name="jurusan" id="jurusan">
+                    <option value="">Pilih Jurusan</option>
+                    <option value="S1RPL">S1 RPL</option>
+                    <option selected value="S1ILKOM">S1 ILKOM </option>
+                </select>
+            </div>
+
+            <label for="jk">Catatan</label>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Comments</label>
+            </div>
+
+            <div>
+                <label for="formFileLg" class="form-label">Foto</label>
+                <input class="form-control" type="file">
+            </div>
+            <br>
+        
+            <div class="mb-3">
+                <label for="nim">Email</label>
+                <input required class="form-control" type="email" name="nim" id="nim" placeholder="Masukan Nim anda" style="width: 900px;">
+            </div>
+
+            <div class="mb-3">
+                <label for="nim">Sandi Login</label>
+                <input required class="form-control" type="password" name="nim" id="nim" placeholder="Masukan Nim anda" style="width: 900px;">
+            </div>
+
+            <div class="mb-3">
+                <label for="nim">Ulangi Sandi Login</label>
+                <input required class="form-control" type="password" name="nim" id="nim" placeholder="Masukan Nim anda" style="width: 900px;">
+            </div>
+
+
+            <input type="submit" class="btn btn-primary" name="submit" value="Simpan">
+            <input type="reset" value="Batal" class="btn btn-danger">
+            <input type="reset" value="Peringatan" class="btn btn-warning">
+        
+        <br>
+
+        </form>
+    </div>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
